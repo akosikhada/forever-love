@@ -5,11 +5,13 @@ import { Heart } from "lucide-react";
 
 interface MessageContentProps {
   message?: string;
+  messageTwo?: string;
   isOpen?: boolean;
 }
 
 const MessageContent = ({
   message = "Will you be my Valentine?",
+  messageTwo = "To the most beautiful, joyful, and radiant person I know, I wish you a Valentine's Day as wonderful as you are 💖",
   isOpen = true,
 }: MessageContentProps) => {
   const [showSuccessModal, setShowSuccessModal] = useState(false);
@@ -160,9 +162,9 @@ const MessageContent = ({
                   transition={{ delay: 1.5 }}
                   className="relative z-10"
                 >
-                  <div className="text-center mb-8">
-                    <h2 className="text-2xl font-bold text-white font-poppins leading-relaxed">
-                      Loving you is the greatest adventure of my life
+                  <div className="text-center mb-14">
+                    <h2 className="lg:text-2xl md:text-lg sm:text-md font-bold text-white font-mono leading-loose">
+                      {messageTwo}
                     </h2>
                   </div>
                   <div className="relative h-32">
